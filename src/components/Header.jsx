@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderImg from'../images/moviebackground.jpg'
+import HeaderImg from'../images/moviebackground.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTicket } from '@fortawesome/free-solid-svg-icons/faTicket';
 import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
@@ -21,15 +21,12 @@ const Header = () => {
           </h1>
           <h3 className="movie__background__para">
             With over 3000 movies on Ticket<span className="red">+</span>, the possibilities are endless!
+            
+
+            Discover our <span className="red"> Affordable plans</span>  and <span className='red'>Movies</span> !
           </h3>
           <div className="movie__input__wrapper">
-            <input
-              type="text"
-              className="movie__input"
-              placeholder="Find a movie"
-              style={{ color: 'ed' }}
-            />
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="movie__search" />
+          
           </div>
         </div>
       </div>
