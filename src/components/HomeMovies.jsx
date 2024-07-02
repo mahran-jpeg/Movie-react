@@ -13,47 +13,35 @@ import HomeMovie from "../UI/HomeMovie";
 const HomeMovies = () => {
   return (
     <>
-   
-  
       <div className="container">
         <div className="row">
           <div className="all__movie__stuff">
-          <div class="movie__searching__results">
-  <h3 class="movie__search__title">Recomended movies :</h3>
-  
-
-</div>
+            <div className="movie__searching__results">
+              <h3 className="movie__search__title">Recomended movies :</h3>
+            </div>
             <div className="movie__list">
-              <HomeMovie 
-              image={TenetImg} 
-              title={'Tenet'} />
-              
-              <HomeMovie 
-              image={G0G2Img} 
-              title={' Guardians of The Galaxy Vol. 2'} />
-             
-              <HomeMovie 
-              image={HomecomingImg} 
-              title={' Spider-Man: Homecoming'} />
-              <HomeMovie 
-              image={CWOImg}
-              title={'A Clockwork Orange'} />
-              <HomeMovie 
-              image={InterstellarImg} 
-              title={'Interstellar'} />
-              <HomeMovie 
-              image={InfinityWarImg}
-              title={'Avengers: Infinity War'} />
-            
-            
+              <HomeMovie image={TenetImg} title={"Tenet"} />
 
+              <HomeMovie
+                image={G0G2Img}
+                title={" Guardians of The Galaxy Vol. 2"}
+              />
+
+              <HomeMovie
+                image={HomecomingImg}
+                title={" Spider-Man: Homecoming"}
+              />
+              <HomeMovie image={CWOImg} title={"A Clockwork Orange"} />
+              <HomeMovie image={InterstellarImg} title={"Interstellar"} />
+              <HomeMovie
+                image={InfinityWarImg}
+                title={"Avengers: Infinity War"}
+              />
             </div>
           </div>
         </div>
       </div>
-  
     </>
-    
   );
 };
 
