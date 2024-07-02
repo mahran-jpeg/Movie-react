@@ -3,20 +3,28 @@ import "./index.css";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import HomeMovies from "./components/HomeMovies";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import MoviesPages from "./pages/MoviesPages";
 
 function App() {
   return (
     <>
-    <div className="app__container">
-    <Sidebar/>
-    <div className="app__container__right">
-    <Header/>
-    <HomeMovies/>
-    </div>
+      <>
   
-    </div>
+      <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+        
+              <Route path="/movies" element={<MoviesPages />} />
+           
+          </Routes>
 
+      
+        </Router>
+          
+       
+      </>
     </>
   );
 }

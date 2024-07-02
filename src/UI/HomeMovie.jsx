@@ -13,9 +13,9 @@ const HomeMovie = ({image,title}) => {
                   <h3 className="movie__info__title">{title}</h3>
                   <div className="movie__info__list">
                     <div className="movie__info">
-                   <button className='movie__hover__button'>
+                   <a href ='/'className='movie__hover__button'>
                     Click for more
-                    </button>
+                    </a>
                     </div>
                   </div>
                 </figure>

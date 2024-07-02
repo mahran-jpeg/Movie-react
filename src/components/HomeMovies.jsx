@@ -17,7 +17,7 @@ const HomeMovies = () => {
         <div className="row">
           <div className="all__movie__stuff">
             <div className="movie__searching__results">
-              <h3 className="movie__search__title">Recomended movies :</h3>
+              <h3 className="movie__search__title">Trending movies :</h3>
             </div>
             <div className="movie__list">
               <HomeMovie image={TenetImg} title={"Tenet"} />
