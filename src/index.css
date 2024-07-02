@@ -40,8 +40,8 @@ a {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-left: 8px;
-  margin-top: 18px; /* Add margin-top for spacing */
-  margin-bottom: 18px; /* Add margin-bottom for spacing */
+  margin-top: 18px; 
+  margin-bottom: 18px; 
 }
 
 .sidebar {
@@ -255,7 +255,7 @@ a {
   width: fit-content;
   word-break: break-word;
   border: 0;
-  bottom: 16px; /* Adjust this value as needed */
+  bottom: 16px; 
 }
 .movie__image__wrapper:hover .movie__img {
   opacity: 0.7;
@@ -278,20 +278,20 @@ a {
 
 @media (max-width: 1200px) {
   .movie__list {
-    justify-content: space-around; /* Center the items */
+    justify-content: space-around; 
     margin-right: 40px;
     margin-left: -224px;
     width: 78%;
   }
 
   .movie {
-    width: 200px; /* Adjust width of each movie */
-    margin: 20px; /* Adjust margin for spacing */
+    width: 200px; 
+    margin: 20px; 
   }
 
   .movie__img {
-    height: auto; /* Ensure images maintain aspect ratio */
-    max-width: 100%; /* Ensure images do not overflow */
+    height: auto; 
+    max-width: 100%; 
   }
   .sidebar {
     width: 200px;
@@ -311,7 +311,7 @@ a {
 }
 @media (max-width: 1024px) {
   .movie__list {
-    justify-content: space-around; /* Center the items */
+    justify-content: space-around; 
     margin-right: 250px;
     width: 60%;
   }
@@ -322,7 +322,7 @@ a {
 }
 @media (max-width: 768px) {
   .movie__list {
-    justify-content: space-around; /* Center the items */
+    justify-content: space-around; 
     margin-right: 380px;
     width: 40%;
   }
@@ -360,7 +360,7 @@ a {
 }
 @media (max-width: 480px) {
   .movie__list {
-    justify-content: space-around; /* Center the items */
+    justify-content: space-around;
     margin-right: 630px;
     width: 30%;
   }
@@ -401,20 +401,20 @@ a {
 }
 @media (max-width: 320px) {
   .movie__list {
-    justify-content: space-around; /* Center the items */
+    justify-content: space-around; 
     margin-right: 820px;
     width: 30%;
   }
   .movie {
-    width: 150px; /* Adjust width of each movie */
-    margin: 20px; /* Adjust margin for spacing */
+    width: 150px; 
+    margin: 20px; 
   }
 .movie__search__title{
   font-size: 18px;
 }
   .movie__img {
-    height: auto; /* Ensure images maintain aspect ratio */
-    max-width: 100%; /* Ensure images do not overflow */
+    height: auto; 
+    max-width: 100%; 
   }
   .movie__searching__results{
     margin-right: 30px;
@@ -454,8 +454,8 @@ a {
     margin-top: 20px;
   }
   .movie__hover__button {
-    font-size: 10px; /* Even smaller font size */
-    padding: 4px 10px; /* Adjust padding for smaller button */
-    line-height: 18px; /* Adjust line height */
+    font-size: 10px; 
+    padding: 4px 10px; 
+    line-height: 18px; 
   }
 }
