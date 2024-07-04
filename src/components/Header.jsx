@@ -6,6 +6,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
 import { faGear } from '@fortawesome/free-solid-svg-icons/faGear';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons/faMagnifyingGlass';
 import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
 <>
@@ -23,7 +24,7 @@ const Header = () => {
             With over 3000 movies on Ticket<span className="red">+</span>, the possibilities are endless!
             
 
-            Discover our <span className="red"> Affordable plans</span>  and <span className='red'>Movies</span> !
+            Discover our < Link to ='/plans'className="red"> Affordable plans</Link>  and <Link to ='/movies' className='red'>Movies</Link> !
           </h3>
           <div className="movie__input__wrapper">
           

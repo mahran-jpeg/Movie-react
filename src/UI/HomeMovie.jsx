@@ -4,6 +4,7 @@ import { faClock } from "@fortawesome/free-solid-svg-icons/faClock";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons/faEarthAmericas";
 import "../index.css";
+import { Link } from 'react-router-dom';
 const HomeMovie = ({image,title}) => {
   return (
   <>
@@ -13,9 +14,9 @@ const HomeMovie = ({image,title}) => {
                   <h3 className="movie__info__title">{title}</h3>
                   <div className="movie__info__list">
                     <div className="movie__info">
-                   <a href ='/'className='movie__hover__button'>
+                   <Link to ='/'className='movie__hover__button'>
                     Click for more
-                    </a>
+                    </Link>
                     </div>
                   </div>
                 </figure>

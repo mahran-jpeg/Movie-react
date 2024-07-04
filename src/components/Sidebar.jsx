@@ -4,6 +4,7 @@ import { faHome } from "@fortawesome/free-solid-svg-icons/faHome";
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
 import { faTicket } from "@fortawesome/free-solid-svg-icons/faTicket";
 import { faFilm } from "@fortawesome/free-solid-svg-icons/faFilm";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -12,31 +13,31 @@ const Sidebar = () => {
     <h2 className="sidebar__title">Menu</h2>
     <ul className="sidebar__links">
       <li className="sidebar__link__wrapper">
-        <a className="sidebar__icon__wrapper" href="/">
+        <Link className="sidebar__icon__wrapper" to ="/">
           <FontAwesomeIcon icon={faHome} className="sidebar__icon" />
-        </a>
-        <a href="/" className="sidebar__link">Home</a>
+        </Link>
+        <Link to="/" className="sidebar__link">Home</Link>
       </li>
       <li className="sidebar__link__wrapper">
-        <a className="sidebar__icon__wrapper" href="/movies">
+        <Link className="sidebar__icon__wrapper" to="/movies">
           <FontAwesomeIcon icon={faFilm} className="sidebar__icon" />
-        </a>
-        <a href="/movies" className="sidebar__link">Movies</a>
+        </Link>
+        <Link to ="/movies" className="sidebar__link">Movies</Link>
       </li>
 
       <div className="thin-line"></div>
 
       <li className="sidebar__link__wrapper">
-        <a className="sidebar__icon__wrapper" href="/plans">
+        <Link className="sidebar__icon__wrapper" to="/plans">
           <FontAwesomeIcon icon={faTicket} className="sidebar__icon" />
-        </a>
-        <a href="/plans" className="sidebar__link">Plans</a>
+        </Link>
+        <Link to="/plans" className="sidebar__link">Plans</Link>
       </li>
       <li className="sidebar__link__wrapper">
-        <a className="sidebar__icon__wrapper" href="/profile">
+        <Link className="sidebar__icon__wrapper" to ="/profile">
           <FontAwesomeIcon icon={faUser} className="sidebar__icon" />
-        </a>
-        <a href="/profile" className="sidebar__link">Profile</a>
+        </Link>
+        <Link to ="/profile" className="sidebar__link">Profile</Link>
       </li>
     </ul>
   </div>
