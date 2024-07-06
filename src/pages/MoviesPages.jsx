@@ -1,35 +1,71 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "../index.css";
 import Sidebar from "../components/Sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons/faSearch";
+import HomeMovieFiltered from "../UI/HomeMovieFiltered";
+
 const MoviesPages = () => {
-  async function fetchData(){
-    console.log(axios.get(' http://www.omdbapi.com/?i=tt3896198&apikey=a6dcc2c2'))
+  const [input, setInput] = useState("");
+  const [movies, setMovies] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState([]);
+
+  const change = (event) => {
+    const lowercaseValue = event.target.value.toLowerCase();
+    setInput(lowercaseValue);
+  };
+
+  async function fetchData() {
+    if (!input) return;
+    try {
+      const { data } = await axios.get(
+        `http://www.omdbapi.com/?s=${input}&apikey=a6dcc2c2`
+      );
+      if (data.Search) {
+        setMovies(data.Search);
+        filterMovies(data.Search, input); 
+      } else {
+        setMovies([]);
+        setFilteredMovies([]);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   }
- 
-  useEffect(()=>{
-    fetchData()
-  },[]);
+
+  const filterMovies = (moviesList, inputValue) => {
+    const filtered = moviesList.filter((movie) =>
+      movie.Title.toLowerCase().includes(inputValue)
+    );
+    setFilteredMovies(filtered);
+  };
 
   return (
     <>
       <div className="app__container">
         <Sidebar />
         <div className="app__container__right">
-          <form className="moviepage__search">
+          <div className="moviepage__search">
             <div className="moviepage__search--input">
-              <input type="text" placeholder="Search for a movie"  />
+              <input
+                type="text"
+                placeholder="Search for a movie"
+                value={input}
+                onChange={change}
+              />
             </div>
             <div className="moviepage__search--button">
-              <button type="submit">
+              <button type="button" onClick={fetchData}>
                 <FontAwesomeIcon icon={faSearch} className="icon__search" />
               </button>
             </div>
-          </form>
-
-          
+          </div>
+          <div className="movie__list">
+            {filteredMovies.slice(0, 6).map((movie) => (
+              <HomeMovieFiltered key={movie.imdbID} movie={movie} />
+            ))}
+          </div>
         </div>
       </div>
     </>
@@ -37,3 +73,4 @@ const MoviesPages = () => {
 };
 
 export default MoviesPages;
+
