@@ -696,3 +696,27 @@ header {
   position: relative;
   margin-left:50px;
 }
+.message__noResult{
+  font-size: 40px;
+color: crimson;
+
+}
+.bomb{
+  font-size: 40px;
+  color: yellow;
+}
+#noResultsMessage {
+  color: crimson;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.noResultsWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 750px;
+  margin-left: 260px;
+  margin-top: 150px;
+}

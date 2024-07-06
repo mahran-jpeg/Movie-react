@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../index.css";
 import Sidebar from "../components/Sidebar";
@@ -10,6 +10,9 @@ const MoviesPages = () => {
   const [input, setInput] = useState("");
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
+  const [message, setMessage] = useState(false);
+  const [movieDisplay, setMovieDisplay] = useState(true);
+
 
   const change = (event) => {
     const lowercaseValue = event.target.value.toLowerCase();
@@ -17,8 +20,6 @@ const MoviesPages = () => {
   };
 
   async function fetchData() {
-    if (!input) return;
-
     const { data } = await axios.get(
       `http://www.omdbapi.com/?s=${input}&apikey=a6dcc2c2`
     );
@@ -49,19 +50,33 @@ const MoviesPages = () => {
               />
             </div>
             <div className="moviepage__search--button">
-              <button type="button" onClick={fetchData}>
+              <button
+                type="button"
+                onClick={() => {
+                  fetchData();
+                 
+                }}
+              >
                 <FontAwesomeIcon icon={faSearch} className="icon__search" />
               </button>
             </div>
           </div>
-          <div className="movie__list__page">
-            {filteredMovies.slice(0, 6).map((movie) => (
-              <HomeMovieFiltered key={movie.imdbID} movie={movie} />
-            ))}
-          </div>
+          {message && (
+            <div className="noResultsWrapper">
+              <span className="message__noResult">
+                No Results For You My Friend
+              </span>
+            </div>
+          )}
+          {movieDisplay && (
+            <div className="movie__list__page">
+              {filteredMovies.slice(0, 6).map((movie) => (
+                <HomeMovieFiltered key={movie.imdbID} movie={movie} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
-  
     </>
   );
 };
