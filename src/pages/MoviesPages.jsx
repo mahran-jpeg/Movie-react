@@ -18,25 +18,18 @@ const MoviesPages = () => {
 
   async function fetchData() {
     if (!input) return;
-    try {
-      const { data } = await axios.get(
-        `http://www.omdbapi.com/?s=${input}&apikey=a6dcc2c2`
-      );
-      if (data.Search) {
-        setMovies(data.Search);
-        filterMovies(data.Search, input); 
-      } else {
-        setMovies([]);
-        setFilteredMovies([]);
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+
+    const { data } = await axios.get(
+      `http://www.omdbapi.com/?s=${input}&apikey=a6dcc2c2`
+    );
+
+    setMovies(data.Search);
+    filterMovies(data.Search, input);
   }
 
-  const filterMovies = (moviesList, inputValue) => {
-    const filtered = moviesList.filter((movie) =>
-      movie.Title.toLowerCase().includes(inputValue)
+  const filterMovies = (movies, input) => {
+    const filtered = movies.filter((movie) =>
+      movie.Title.toLowerCase().includes(input)
     );
     setFilteredMovies(filtered);
   };
@@ -61,16 +54,16 @@ const MoviesPages = () => {
               </button>
             </div>
           </div>
-          <div className="movie__list">
+          <div className="movie__list__page">
             {filteredMovies.slice(0, 6).map((movie) => (
               <HomeMovieFiltered key={movie.imdbID} movie={movie} />
             ))}
           </div>
         </div>
       </div>
+  
     </>
   );
 };
 
 export default MoviesPages;
-
