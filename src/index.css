@@ -328,9 +328,22 @@ a {
   color: white;
   background-color: crimson;
 }
-
 .icon__search {
   font-size: 36px;
+}
+
+.message__noResult{
+  font-size: 30px;
+color: crimson;
+
+}
+.noResultsWrapper{
+  display: flex;
+ margin-left: 340px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 150px;
+  max-width: 750px;
 }
 /* PROFILE PAGE */
 .form-container {
@@ -513,7 +526,24 @@ header {
   margin-left:50px;
 }
 
+.spinner {
+  font-size: 64px;
+  color: crimson;
+ 
+ margin-left: 600px;
+margin-top: 200px;
+  animation: loading 1000ms infinite;
+}
 
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
