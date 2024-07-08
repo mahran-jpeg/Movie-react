@@ -35,7 +35,11 @@ const MoviesPages = () => {
     );
     setFilteredMovies(filtered);
   };
-
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+  fetchData()
+    }
+  };
   return (
     <>
       <div className="app__container">
@@ -48,6 +52,7 @@ const MoviesPages = () => {
                 placeholder="Search for a movie"
                 value={input}
                 onChange={change}
+                onKeyPress={handleKeyPress}
               />
             </div>
             <div className="moviepage__search--button">
