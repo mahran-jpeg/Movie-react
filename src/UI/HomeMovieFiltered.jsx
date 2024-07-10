@@ -10,7 +10,7 @@ const HomeMovieFiltered = ({ movie }) => {
         <h3 className="movie__info__title">{movie.Title}</h3>
         <div className="movie__info__list">
           <div className="movie__info">
-            <Link to="/" className="movie__hover__button">
+            <Link to={`/movie/${movie.imdbID}`}  className="movie__hover__button">
               Click for more
             </Link>
           </div>
