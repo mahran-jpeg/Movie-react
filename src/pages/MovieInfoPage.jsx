@@ -12,7 +12,7 @@ const MovieInfoPage = () => {
     async function getData() {
       console.log(imdbID);
       const { data } = await axios.get(
-    `https://www.omdbapi.com/?s=${imdbID}&apikey=a6dcc2c2`
+    `https://www.omdbapi.com/?i=${imdbID}&apikey=a6dcc2c2`
       );
       console.log(data);
       setSelectedMovie(data);
