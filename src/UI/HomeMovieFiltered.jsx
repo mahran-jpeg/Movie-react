@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { useParams } from 'react-router-dom';
 const HomeMovieFiltered = ({ movie }) => {
+  const { imdbID} = useParams();
   return (
     <div className="all__movies__stuff">
  <div className="movie">
