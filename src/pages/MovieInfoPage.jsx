@@ -5,15 +5,22 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 const MovieInfoPage = () => {
-  const [selectedMovie, setSelectedMovie] = useState();
+  const [selectedMovie, setSelectedMovie] = useState('');
   const { imdbID } = useParams();
+ 
 
-  async function getData() {
-    const { data } = await axios.get(
-      `https://www.omdbapi.com/?i=${imdbID}&apikey=a6dcc2c2`
-    );
-    setSelectedMovie(data.Search);
-  }
+    async function getData() {
+      console.log(imdbID);
+      const { data } = await axios.get(
+    `https://www.omdbapi.com/?s=${imdbID}&apikey=a6dcc2c2`
+      );
+      console.log(data);
+      setSelectedMovie(data);
+
+    }
+useEffect(()=>{
+  getData()
+},[])
 
   return (
     <>
@@ -46,7 +53,7 @@ const MovieInfoPage = () => {
                           {selectedMovie?.Runtime}
                         </p>
                         <p className="movie__details__rating">
-                          {selectedMovie?.Ratings[0].Value}
+                        {selectedMovie?.Ratings?.[0]?.Value ?? 'N/A'}
                         </p>
                       </div>
                       <p className="selected-product__para">
