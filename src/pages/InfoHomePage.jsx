@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
-import Sidebar from "../components/Sidebar";
-import TenetImg from "../images/tenet.jpg";
-import { useState } from "react";
+import React from 'react';
+import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 import axios from "axios";
-const MovieInfoPage = () => {
+const InfoHomePage = () => {
   const [selectedMovie, setSelectedMovie] = useState({});
-  const { imdbId} = useParams();
+  const {imdbId} = useParams();
 
   async function getData() {
     const { data } = await axios.get(
@@ -17,12 +16,12 @@ const MovieInfoPage = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [imdbId]);
 
   return (
     <>
-      <div className="app__container">
-        <Sidebar />
+    <div className="app__container">
+        <Sidebar/>
         <div className="app__container__right">
           <div className="movies__main">
             <div className="container">
@@ -67,6 +66,6 @@ const MovieInfoPage = () => {
       </div>
     </>
   );
-};
+}
 
-export default MovieInfoPage;
+export default InfoHomePage;

@@ -7,6 +7,7 @@ import ProfilePage from "./pages/ProfilePage";
 import { Link } from "react-router-dom";
 import PlansPage from "./pages/PlansPage";
 import MovieInfoPage from "./pages/MovieInfoPage";
+import InfoHomePage from "./pages/InfoHomePage";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/plans" element={<PlansPage/>}/>
             <Route path='/movie/:imdbId' element ={<MovieInfoPage/>}/>
+            <Route path='/movie/home/:imdbId' element ={<InfoHomePage/>}/>
           </Routes>
         </Router>
   
