@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 const HomeMovieFiltered = ({ movie }) => {
   const { imdbID} = useParams();
   return (
-    <div className="all__movies__stuff">
+    <div className="all__movies__stuff__page">
  <div className="movie">
       <figure className="movie__image__wrapper">
         <img src={movie.Poster} className="movie__img" />

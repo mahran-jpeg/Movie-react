@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
 <>
-  <div className="sidebar">
+  <div className="sidebar" id="sidebar">
     <h2 className="sidebar__title">Menu</h2>
-    <ul className="sidebar__links">
+    <ul className="sidebar__links" id="sidebar__links">
       <li className="sidebar__link__wrapper">
         <Link className="sidebar__icon__wrapper" to ="/">
           <FontAwesomeIcon icon={faHome} className="sidebar__icon" />
@@ -33,7 +33,7 @@ const Sidebar = () => {
         </Link>
         <Link to="/plans" className="sidebar__link">Plans</Link>
       </li>
-      <li className="sidebar__link__wrapper">
+      <li className="sidebar__link__wrapper profile__link__sidebar">
         <Link className="sidebar__icon__wrapper" to ="/profile">
           <FontAwesomeIcon icon={faUser} className="sidebar__icon" />
         </Link>
