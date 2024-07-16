@@ -7,7 +7,9 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons/faSearch";
 import HomeMovieFiltered from "../UI/HomeMovieFiltered";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons/faSpinner";
 import Spinner from "../UI/Spinner";
-
+import MovieSkeleton from "../UI/MovieSkeleton";
+import Skeleton from 'react-loading-skeleton';
+import SkeletonTheme from 'react-loading-skeleton';
 const MoviesPages = () => {
   const [input, setInput] = useState("");
   const [movies, setMovies] = useState([]);
@@ -63,7 +65,13 @@ const MoviesPages = () => {
       fetchData();
     }
   };
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      fetchData();
+    }, 10000); 
 
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <>
       <div className="app__container">
@@ -99,7 +107,16 @@ const MoviesPages = () => {
           )}
 
           {loading ? (
-            <Spinner />
+       <div className="movie__list__page">
+        <>
+            <MovieSkeleton />
+            <MovieSkeleton />
+            <MovieSkeleton />
+            <MovieSkeleton />
+            <MovieSkeleton />
+            <MovieSkeleton />
+          </>
+       </div>
           ) : (
             <div className="movie__list__page">
               {filteredMovies.slice(0, 6).map((movie) => (

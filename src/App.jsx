@@ -11,7 +11,7 @@ import InfoHomePage from "./pages/InfoHomePage";
 
 
 function App() {
-  <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+  
   return (
    
         <Router>
