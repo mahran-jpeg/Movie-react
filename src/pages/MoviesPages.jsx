@@ -16,7 +16,7 @@ const MoviesPages = () => {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
- 
+
   const change = (event) => {
     const lowercaseValue = event.target.value.toLowerCase();
     setInput(lowercaseValue);
@@ -35,20 +35,21 @@ const MoviesPages = () => {
         `https://www.omdbapi.com/?s=${input}&apikey=a6dcc2c2`
       );
 
-      if (data.Response === "False") {
-        setErrorMessage("No movies found. Please try again :) .");
-        setMovies([]);
-        setFilteredMovies([]);
-      } else {
-        setErrorMessage("");
-        setMovies(data.Search);
-        filterMovies(data.Search, input);
-      }
-      setLoading(false);
+      setTimeout(() => {
+        if (data.Response === "False") {
+          setErrorMessage("No movies found. Please try again :) .");
+          setMovies([]);
+          setFilteredMovies([]);
+        } else {
+          setErrorMessage("");
+          setMovies(data.Search);
+          filterMovies(data.Search, input);
+        }
+        setLoading(false);
+      }, 9000); // 1 second delay
     } catch (error) {
       setMovies([]);
       setFilteredMovies([]);
-    } finally {
       setLoading(false);
     }
   }
@@ -65,13 +66,7 @@ const MoviesPages = () => {
       fetchData();
     }
   };
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      fetchData();
-    }, 10000); 
 
-    return () => clearTimeout(timeout);
-  }, []);
   return (
     <>
       <div className="app__container">
@@ -107,16 +102,16 @@ const MoviesPages = () => {
           )}
 
           {loading ? (
-       <div className="movie__list__page">
-        <>
-            <MovieSkeleton />
-            <MovieSkeleton />
-            <MovieSkeleton />
-            <MovieSkeleton />
-            <MovieSkeleton />
-            <MovieSkeleton />
-          </>
-       </div>
+            <div className="movie__list__page">
+              <>
+                <MovieSkeleton />
+                <MovieSkeleton />
+                <MovieSkeleton />
+                <MovieSkeleton />
+                <MovieSkeleton />
+                <MovieSkeleton />
+              </>
+            </div>
           ) : (
             <div className="movie__list__page">
               {filteredMovies.slice(0, 6).map((movie) => (
