@@ -13,7 +13,7 @@ const InfoHomePage = () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `https://www.omdbapi.com/?i=${imdbId}&plot=full&apikey=a6dcc2c2`
+        `https://www.omdbapi.com/?i=${imdbId}&plot=short&apikey=a6dcc2c2`
       );
       setSelectedMovie(data);
 

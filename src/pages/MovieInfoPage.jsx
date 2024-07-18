@@ -10,11 +10,13 @@ const MovieInfoPage = () => {
   const [selectedMovie, setSelectedMovie] = useState({});
   const { imdbId } = useParams();
   const [loading, setLoading] = useState(false);
+
+
   async function getData() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `https://www.omdbapi.com/?i=${imdbId}&plot=full&apikey=a6dcc2c2`
+        `https://www.omdbapi.com/?i=${imdbId}&plot=short&apikey=a6dcc2c2`
       );
       setSelectedMovie(data);
 
@@ -28,10 +30,12 @@ const MovieInfoPage = () => {
       setLoading(false);
     }
   }
+  
+    useEffect(() => {
+      getData();
+    }, []);
 
-  useEffect(() => {
-    getData();
-  }, []);
+
 
   return (
     <>

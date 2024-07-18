@@ -140,8 +140,8 @@ a {
 .movie__background__wrapper {
   top: 0;
   height: 340px;
-  max-width: 100%;
-  width: 1320px;
+  max-width: 100% ;
+  width: 1320px ;
   overflow: hidden;
   position: relative;
   box-shadow: 0 60px 50px 0 rgb(5, 5, 5, 0.45);
@@ -350,6 +350,31 @@ a {
   font-size: 30px;
   color: crimson;
 }
+.movie__list__page {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  margin-left: 50px;
+}
+
+.spinner {
+  font-size: 64px;
+  color: crimson;
+  margin-left: 600px;
+  margin-top: 200px;
+  animation: loading 1000ms infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .noResultsWrapper {
   display: flex;
   margin-left: 340px;
@@ -527,226 +552,6 @@ header {
 .plan__header h2 {
   margin: 0 1rem;
 }
-/* MOVIE PAGE */
-.movie__list__page {
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  position: relative;
-  margin-left: 50px;
-}
-
-.spinner {
-  font-size: 64px;
-  color: crimson;
-  margin-left: 600px;
-  margin-top: 200px;
-  animation: loading 1000ms infinite;
-}
-
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* MEDIA QUERIES */
-
-@media (max-width: 480px){
-  .movie__background__text {
-    transform: translate(-100%, -50%) !important;
-    margin-left: -250px;
-  }
-  .movie__background__title {
-    font-size: 50px;
-    margin-right: 900px;
-  }
-
-  .movie__background__para {
-    font-size: 18px;
-    margin-right: 80px;
-  }
-  .movie__list {
- max-width: 700px;
- width: 300px;
-  }
-}
-@media (max-width: 640px) {
-  .movie__background__text {
-    transform: translate(-66%, -50%) !important;
-    margin-left: -200px;
-  }
-  .movie__background__title {
-    font-size: 50px;
-    margin-right: 80px;
-  }
-  .movie__list {
-    margin-right: 300px;
-    margin-left: -80px;
-  }
-  .movie__background__para {
-    font-size: 18px;
-    margin-right: 80px;
-  }
-  .movie__list__page {
-    max-width: 200px;
-    width: 200px;
-    margin-left: 200px;
-  }
-  .all__movies__stuff__page {
-    max-width: 200px;
-    width: 200px;
-  }
-  #sidebar {
-    width: 100px;
-  }
-  .form-container {
-    width: 600px;
-    height: 400px;
-  }
-  .input__profile {
-    margin-right: 500px;
-  }
-  .login__button {
-    margin-left: 100px;
-  }
-
-  .spinner {
-    right: 50%;
-    left: 50%;
-  }
-}
-@media (max-width: 768px) {
-  .movie__list {
-    justify-content: space-around;
-    margin-right: 380px;
-    width: 30%;
-  }
-
-  .movie__background__text {
-    max-width: 400px;
-    margin-left: -100px;
-  }
-  .movie__background__para {
-    font-size: 16px;
-  }
-  .all__movie__stuff {
-    width: 60%;
-  }
-  /* MOVIE PAGE */
-  .movie__list__page {
-    width: 46%;
-    margin-right: 50px;
-  }
-  .all__movies__stuff__page {
-    max-width: 500px;
-    width: 300px;
-    margin-right: 50px;
-  }
-
-  /* SIDEBAR */
-  .sidebar__link {
-    display: none;
-  }
-  .sidebar__title {
-    display: none;
-  }
-  .movie__background {
-    width: 90%;
-  }
-  .sidebar {
-    width: 250px;
-  }
-  .sidebar__links {
-    margin-right: 22px;
-    gap: 20px;
-  }
-  .thin-line {
-    width: 150%;
-  }
-  .sidebar__icon {
-    margin-top: 20px;
-  }
-  .selected-product {
-    margin-right: 50px;
-  }
-  #sidebar {
-    width: 120px;
-  }
-  .form-container {
-    width: 500px;
-    height: 400px;
-  }
-  .input__profile {
-    margin-left: 72px;
-    width: 350px;
-  }
-  .login__button {
-    margin-left: 72px;
-  }
-}
-@media (max-width: 1024px) {
-  /* HEADER */
-  .movie__background__text {
-    right: 200px;
-    left: 516px;
-  }
-  /* HOMEPAGE */
-  .all__movie__stuff {
-    margin-right: 260px;
-  }
-  .movie__list {
-    width: 50%;
-  }
-  .movie__list__page {
-    width: 74%;
-    right: 40px;
-  }
-  .spinner {
-    margin-left: 430px;
-  }
-  .noResultsWrapper {
-    margin-left: 140px;
-  }
-}
-
-@media (max-width: 1280px) {
-  /* HEADER */
-  .movie__background__text {
-    top: 30%;
-    transform: translate(-60%, -50%);
-  }
-  .movie__background__para {
-    font-size: 25px;
-  }
-  .movie__background__title {
-    font-size: 70px;
-    margin-left: 30px;
-  }
-
-  /* MOVIE PAGE */
-  .moviepage__search {
-    width: 1090px;
-  }
-  .moviepage__search {
-    margin-bottom: 30px;
-  }
-  /* MOVIE INFO PAGE */
-  .selected-product__img__wrapper {
-    margin-top: 80px;
-  }
-  /* HOME PAGE */
-  .movie__list {
-    width: 80%;
-    margin-right: 200px;
-  }
-}
-@media (max-width:1440px){
-
-}
 
 /* SELECTED PRODUCT PAGE */
 .product-page__row {
@@ -824,3 +629,41 @@ header {
   flex-direction: column;
   gap: 24px;
 }
+.movie {
+  width: 198px;
+  height: 288px; 
+  margin: 24px 8px;
+  /* background-color: #f0f0f0; */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 12px 0px rgba(5, 5, 5, 0.45);
+}
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 40%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  animation: shimmer-animation 1s infinite linear;
+}
+
+@keyframes shimmer-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+
+

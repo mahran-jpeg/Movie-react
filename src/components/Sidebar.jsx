@@ -28,10 +28,10 @@ const Sidebar = () => {
       <div className="thin-line"></div>
 
       <li className="sidebar__link__wrapper">
-        <Link className="sidebar__icon__wrapper" to="/plans">
+        <Link className="sidebar__icon__wrapper" >
           <FontAwesomeIcon icon={faTicket} className="sidebar__icon" />
         </Link>
-        <Link to="/plans" className="sidebar__link">Plans</Link>
+        <Link  className="sidebar__link">Plans</Link>
       </li>
       <li className="sidebar__link__wrapper profile__link__sidebar">
         <Link className="sidebar__icon__wrapper" to ="/profile">

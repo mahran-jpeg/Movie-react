@@ -1,200 +1,120 @@
-@media (max-width: 480px){
-  .movie__background__text {
-    transform: translate(-100%, -50%) !important;
-    margin-left: -220px;
+
+@media only screen and (max-device-width: 480px) {
+/* SIDEBAR */
+.sidebar__link{
+  display: none;
+}
+.sidebar__title{
+  margin-left: -10px;
+}
+.sidebar {
+  width: 100px;
+}
+.sidebar__links{
+  margin-left: -30px;
+  align-items: center;
+}
+/* HOMEPAGE */
+.movie__list{
+  max-width: 300px;
+  width: 280px;
+  margin-right: 120px;
+}
+.movie__background__text{
+  margin-left: -60px;
+}
+}
+@media only screen and (max-device-width: 768px) {
+  /* HOME PAGE */
+.all__movie__stuff{
+ max-width: 600px;
+ width: 480px;
+}
+.movie__background__para {
+  margin-left: -350px;
+  font-size: 20px;
+  max-width: 300px;
+}
+.movie__background__title {
+  margin-left: -320px;
+}
+.movie__list__page {
+  max-width: 600px;
+  width: 480px;
+  margin-left: -16px;
+}
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (max-device-width: 1024px) {
+  .all__movie__stuff {
+    width: 70%;
+    margin-left: 40px;
+  }
+  .movie__background__para {
+    margin-right: 380px;
   }
   .movie__background__title {
-    font-size: 40px;
-    margin-right: 48px;
-  }
-  .movie__search__title{
-    margin-right: 50px;
-  }
-
-  .movie__background__para {
-    font-size: 12px;
-    margin-right: 48px;
-  }
-  .movie__list {
- max-width:300px;
- margin-left: 12px;
-  }
- .all__movie__stuff{
-  max-width: 500px;
- }
- .movie__list__page {
-  width: 40%;
-  margin-right: 300px;
-  margin-left: 120px;
-}
-.noResultsWrapper{
-  margin-right: 300px;
-  max-width: 250px;
-  right: 200px;
-}
-
-.selected-product__right{
-max-height: 400px;
-}
-}
-
-@media (max-width: 768px) {
-  .movie__list {
-    justify-content: space-around;
     margin-right: 380px;
-    width: 30%;
   }
-
-  .movie__background__text {
-    max-width: 400px;
-    margin-left: -100px;
-  }
-  .movie__background__para {
-    font-size: 16px;
-  }
-  .all__movie__stuff {
+  .movie__list__page {
     width: 60%;
   }
-  /* MOVIE PAGE */
-  .movie__list__page {
-    width: 46%;
-    margin-right: 50px;
-  }
-  .all__movies__stuff__page {
-    max-width: 500px;
-    width: 300px;
-    margin-right: 50px;
-  }
-
-  /* SIDEBAR */
-  .sidebar__link {
-    display: none;
-  }
-  .sidebar__title {
-    display: none;
-  }
-  .movie__background {
-    width: 90%;
-  }
-  .sidebar {
-    width: 250px;
-  }
-  .sidebar__links {
-    margin-right: 22px;
-    gap: 20px;
-  }
-  .thin-line {
-    width: 150%;
-  }
-  .sidebar__icon {
-    margin-top: 20px;
-  }
-  .selected-product {
-    margin-right: 50px;
-  }
-  #sidebar {
-    width: 120px;
-  }
-  .form-container {
-    width: 500px;
-    height: 400px;
-  }
-  .input__profile {
-    margin-left: 72px;
-    width: 350px;
-  }
-  .login__button {
-    margin-left: 72px;
-  }
-}
-@media (max-width: 1024px) {
-  /* HEADER */
-  .movie__background__text {
-    right: 200px;
-    left: 516px;
-  }
-  /* HOMEPAGE */
-  .all__movie__stuff {
-    margin-right: 260px;
-  }
-  .movie__list {
-    width: 50%;
-  }
-  .movie__list__page {
-    width: 74%;
-    right: 40px;
-  }
-  .spinner {
-    margin-left: 430px;
-  }
-  .noResultsWrapper {
-    margin-left: 140px;
-  }
 }
 
-@media (max-width: 1280px) {
-  /* HEADER */
-  .movie__background__text {
-    top: 30%;
-    transform: translate(-60%, -50%);
-  }
-  .movie__background__para {
-    font-size: 25px;
-  }
-  .movie__background__title {
-    font-size: 70px;
-    margin-left: 30px;
-  }
-
-  /* MOVIE PAGE */
-  .moviepage__search {
-    width: 1090px;
-  }
-  .moviepage__search {
-    margin-bottom: 30px;
-  }
-  /* MOVIE INFO PAGE */
-  .selected-product__img__wrapper {
-    margin-top: 80px;
-  }
-  /* HOME PAGE */
+/* Desktops and laptops ----------- */
+@media only screen and (max-width: 1280px) {
   .movie__list {
     width: 80%;
-    margin-right: 200px;
+    margin-right: 220px;
   }
 }
-.movie {
-  width: 198px;
-  height: 288px; 
-  margin: 24px 8px;
-  /* background-color: #f0f0f0; */
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 8px 12px 0px rgba(5, 5, 5, 0.45);
-}
-
-.shimmer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 40%,
-    rgba(255, 255, 255, 0) 80%
-  );
-  animation: shimmer-animation 1s infinite linear;
-}
-
-@keyframes shimmer-animation {
-  0% {
-    transform: translateX(-100%);
+@media only screen and (max-width: 1360px) {
+  .movie__list {
+    width: 80%;
+    margin-right: 180px;
   }
-  100% {
-    transform: translateX(100%);
-  }
+
 }
 
+@media only screen and (min-width: 1500px) {
+  /* HOMEPAGE */
+  .movie__background__wrapper {
+    width: 1600px;
+  }
+  .movie__list {
+    margin-right: 800px;
+    margin-left: -80px;
+  }
+  .moviepage__search {
+    width: 1500px;
+  }
+  .movie__list__page {
+    margin-left: 80px;
+  }
+
+}
+
+
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* HEADER , HOMEPAGE */
+  .movie__background__wrapper {
+    width: 1900px;
+  }
+
+  /* MOVIE PAGE */
+  .moviepage__search {
+    width: 1720px;
+  }
+  .movie__list__page {
+    margin-left: 50px;
+    margin-right: 150px;
+  }
+  .noResultsWrapper {
+    margin-left: 600px;
+  }
+  .moviepage__search--button{
+    display: none;
+  }
+}

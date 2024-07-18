@@ -46,7 +46,7 @@ const MoviesPages = () => {
           filterMovies(data.Search, input);
         }
         setLoading(false);
-      }, 9000); // 1 second delay
+      }, 3000); // 1 second delay
     } catch (error) {
       setMovies([]);
       setFilteredMovies([]);
