@@ -94,7 +94,23 @@
 
 }
 
+@media only screen and (min-width: 1490px) {
+  /* HOMEPAGE */
+  .movie__background__wrapper {
+    width: 1600px;
+  }
+  .movie__list {
+    margin-right: 800px;
+    margin-left: -80px;
+  }
+  .moviepage__search {
+    width: 1900px;
+  }
+  .movie__list__page {
+    margin-left: 80px;
+  }
 
+}
 
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
