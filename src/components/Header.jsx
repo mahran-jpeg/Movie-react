@@ -24,7 +24,7 @@ const Header = () => {
             With over 3000 movies on Ticket<span className="red">+</span>, the possibilities are endless!
             
 
-            Discover our < Link to ='/plans'className="red"> Affordable plans</Link>  and <Link to ='/movies' className='red'>Movies</Link> !
+            Discover our < Link className="red"> Affordable plans</Link>  and <Link to ='/movies' className='red'>Movies</Link> !
           </h3>
           <div className="movie__input__wrapper">
           
