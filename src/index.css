@@ -86,7 +86,7 @@
     margin-left: -80px;
   }
   .moviepage__search {
-    width: 1500px;
+    width: 1900px;
   }
   .movie__list__page {
     margin-left: 80px;
@@ -109,28 +109,42 @@
   .movie__list__page {
     margin-left: 80px;
   }
-
+.all__movie__stuff{
+  margin-right: 200px;
+}
+.movie__search__title{
+  margin-right: 450px;
+  margin-left: -450px;
+}
 }
 
 /* Large screens ----------- */
+/* 67% zoom */
 @media only screen and (min-width: 1824px) {
   /* HEADER , HOMEPAGE */
   .movie__background__wrapper {
-    width: 1900px;
+    width: 1990px;
   }
 
   /* MOVIE PAGE */
   .moviepage__search {
-    width: 1720px;
+    width: 1990px;
   }
   .movie__list__page {
-    margin-left: 50px;
-    margin-right: 150px;
+  margin-left: 100px;
+    margin-right: 250px;
   }
   .noResultsWrapper {
     margin-left: 600px;
   }
   .moviepage__search--button{
     display: none;
+  }
+  .all__movie__stuff{
+    margin-left: 200px;
+  }
+  .movie__search__title{
+    margin-right: 430px;
+    margin-left: -100px;
   }
 }
