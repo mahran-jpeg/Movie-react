@@ -95,8 +95,8 @@ const MoviesPages = () => {
           </div>
           {errorMessage && (
             <div className="noResultsWrapper">
-              <p>
-                <span className="message__noResult">{errorMessage}</span>
+              <p className="message__noResult">
+                <span>{errorMessage}</span>
               </p>
             </div>
           )}
