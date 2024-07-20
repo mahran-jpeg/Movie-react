@@ -273,6 +273,17 @@
   font-size: 30px;
 }
 /* MOVIE INFO */
+.selected-movie__details{
+  display:flex !important;
+  gap: 20px !important;
+  align-items: center !important; 
+}
+.movie__details__release-date,
+.movie__details__runtime,
+.movie__details__rating {
+  display: flex;
+  align-items: center;
+}
 .selected-product {
   flex-direction: column;
 }
@@ -291,6 +302,8 @@
 }
 .movie__details__release-date {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .movie__details__runtime {
   margin-top: 10px;
