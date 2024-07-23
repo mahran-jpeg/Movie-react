@@ -16,14 +16,14 @@ const HomeMovies = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="row">
-          <div className="all__movie__stuff">
-            <div className="movie__searching__results">
+      <div className="container movie__container">
+        <div className="row movie__row">
+          
               <h3 className="movie__search__title">Trending movies :</h3>
-            </div>
-            <div className="movie__list">
-            <HomeMovie
+            
+            <div className="all__movie__stuff">
+              <div className="movie__list">
+              <HomeMovie
     image={TenetImg}
     title={"Tenet"}
     imdbId={"tt6723592"}
@@ -55,8 +55,10 @@ const HomeMovies = () => {
     title={"Avengers: Infinity War"}
     imdbId={"tt4154756"}
   />
+              </div>
+            
             </div>
-          </div>
+          
         </div>
       </div>
     </>

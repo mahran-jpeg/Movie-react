@@ -113,11 +113,15 @@ const MoviesPages = () => {
               </>
             </div>
           ) : (
-            <div className="movie__list__page">
+       
+            
+              <div className="movie__list__page">
               {filteredMovies.slice(0, 6).map((movie) => (
                 <HomeMovieFiltered key={movie.imdbID} movie={movie} />
               ))}
             </div>
+             
+          
           )}
         </div>
       </div>
