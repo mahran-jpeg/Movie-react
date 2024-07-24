@@ -178,11 +178,13 @@ margin-right: -4px !important;
   }
  .skeleton{
  
-  width: 100px;
-  height: 150px;
+  width: 124px;
+  height: 160px;
   display: block;
  }
- 
+ .sidebar__title{
+  display: none;
+ }
 }
 @media only screen and (max-width: 640px) {
   .moviepage__search--button {
